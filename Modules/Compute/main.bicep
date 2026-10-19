@@ -1,4 +1,4 @@
-param location string = 'eastus'
+param location string = 'indiasouthcentral'
 param subnetId string 
 param vm1Name string = 'vm-01'
 param vm2Name string = 'vm-02'

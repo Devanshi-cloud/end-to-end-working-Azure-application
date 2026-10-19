@@ -20,7 +20,10 @@ module Compute  'Modules/Compute/main.bicep' = {
 }
 
 module KeyValue 'Modules/Keyvault/main.bicep' = {
-   name: 'KeyValue'
+  name: 'KeyValue'
+  params: {
+    keyvaultname: 'kv-oculyx-344c61a7'
+  }
 }
 
 module Storage 'Modules/Storage/main.bicep' = {

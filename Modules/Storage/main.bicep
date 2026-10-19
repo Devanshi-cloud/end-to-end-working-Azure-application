@@ -1,9 +1,7 @@
+param location string = 'indiasouthcentral'
+param storageAccountName string = 'stsecureapp1792377709'
 
-param location string = 'eastus'
-param storageAccountName string = 'stsecureapp'
-param keyvaultname string= 'keyvalue1'
-
-resource storageAccount 'Microsoft.Storage/storageAccounts@2026-04-01' = {
+resource storageAccount 'Microsoft.Storage/storageAccounts@2023-05-01' = {
   name: storageAccountName
   location: location
   sku: {
@@ -14,15 +12,3 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2026-04-01' = {
     accessTier: 'Hot'
   }
 }
- resource keyVault 'Microsoft.KeyVault/vaults@2026-05-15' =  {
-  name: keyvaultname
-  location: location
-  properties: {
-    tenantId: tenant().tenantId
-    sku: {
-      family: 'A'
-      name: 'standard'
-  }
- }
-}
-
